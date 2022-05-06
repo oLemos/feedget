@@ -1,0 +1,7 @@
+{
+	"arrowParens": "avoid",
+	"endOfLine": "lf",
+	"singleQuote": true,
+	"semi": false,
+	"trailingComma": "es5"
+}

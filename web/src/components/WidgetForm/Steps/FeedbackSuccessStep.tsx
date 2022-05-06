@@ -1,6 +1,6 @@
-import { CloseButton } from "../../CloseButton"
+import { CloseButton } from '../../CloseButton'
 
-import successImage from '../../../assets/success.svg';
+import successImage from '../../../assets/success.svg'
 
 interface FeedbackSuccessStepProps {
     onFeedbackRestartRequested: () => void;

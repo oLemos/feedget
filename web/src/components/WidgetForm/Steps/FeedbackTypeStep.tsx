@@ -1,5 +1,5 @@
-import { FeedbackType, feedbackTypes } from "..";
-import { CloseButton } from "../../CloseButton";
+import { FeedbackType, feedbackTypes } from '..'
+import { CloseButton } from '../../CloseButton'
 
 interface FeedbackTypeStepProps {
     onFeedbackTypeChanged: (type: FeedbackType) => void;
@@ -25,7 +25,7 @@ export const FeedbackTypeStep = ({ onFeedbackTypeChanged }: FeedbackTypeStepProp
                             <img src={value.image.source} alt={value.image.alt} />
                             <span>{value.title}</span>
                         </button>
-                    );
+                    )
                 })}
             </div>
         </>

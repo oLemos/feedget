@@ -1,9 +1,9 @@
-import { FormEvent, useState } from "react";
-import { ArrowLeft } from "phosphor-react";
+import { FormEvent, useState } from 'react'
+import { ArrowLeft } from 'phosphor-react'
 
-import { FeedbackType, feedbackTypes } from "..";
-import { CloseButton } from "../../CloseButton";
-import { ScreenshotButton } from "../ScreenshotButton";
+import { FeedbackType, feedbackTypes } from '..'
+import { CloseButton } from '../../CloseButton'
+import { ScreenshotButton } from '../ScreenshotButton'
 
 interface FeedbackContentStepProps {
     feedbackType: FeedbackType;
@@ -12,20 +12,20 @@ interface FeedbackContentStepProps {
 }
 
 export const FeedbackContentStep = ({ feedbackType, onFeedbackRestartRequested, onFeedbackSent }: FeedbackContentStepProps) => {
-    const [screenshot, setScreenshot] = useState<string | null>(null);
-    const [comment, setComment] = useState<string>('');
+    const [screenshot, setScreenshot] = useState<string | null>(null)
+    const [comment, setComment] = useState<string>('')
 
-    const feedbackTypeInfo = feedbackTypes[feedbackType];
+    const feedbackTypeInfo = feedbackTypes[feedbackType]
 
     function handleSubmitFeedback(event: FormEvent) {
-        event.preventDefault();
+        event.preventDefault()
 
         console.log({
             screenshot,
             comment,
         })
 
-        onFeedbackSent();
+        onFeedbackSent()
     }
 
     return (

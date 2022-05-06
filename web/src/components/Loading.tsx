@@ -1,4 +1,4 @@
-import { CircleNotch } from "phosphor-react"
+import { CircleNotch } from 'phosphor-react'
 
 export const Loading = () => {
     return (

@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
-import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
-import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep";
+import { FeedbackTypeStep } from './Steps/FeedbackTypeStep'
+import { FeedbackContentStep } from './Steps/FeedbackContentStep'
+import { FeedbackSuccessStep } from './Steps/FeedbackSuccessStep'
 
-import bugImage from '../../assets/bug.svg';
-import ideaImage from '../../assets/idea.svg';
-import thoughtImage from '../../assets/thought.svg';
+import bugImage from '../../assets/bug.svg'
+import ideaImage from '../../assets/idea.svg'
+import thoughtImage from '../../assets/thought.svg'
 
 export const feedbackTypes = {
     BUG: {
@@ -35,12 +35,12 @@ export const feedbackTypes = {
 export type FeedbackType = keyof typeof feedbackTypes;
 
 export const WidgetForm = () => {
-    const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
-    const [feedbackSent, setFeedbackSent] = useState(false);
+    const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
+    const [feedbackSent, setFeedbackSent] = useState(false)
 
     function handleRestartFeedback() {
-        setFeedbackSent(false);
-        setFeedbackType(null);
+        setFeedbackSent(false)
+        setFeedbackType(null)
     }
 
     return (
@@ -62,7 +62,7 @@ export const WidgetForm = () => {
             )}
 
             <footer className="text-xs text-neutral-400">
-                Feito com ❤️ por <a className="underline underline-offset-2" target="_blank" href="https://github.com/oLemos/feedget">Gabriel Lemos</a>
+                Feito com ❤️ por <a className="underline underline-offset-2" target="_blank" href="https://github.com/oLemos/feedget" rel="noreferrer">Gabriel Lemos</a>
             </footer>
         </div>
     )

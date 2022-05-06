@@ -1,7 +1,7 @@
-import { useState } from "react";
-import html2canvas from 'html2canvas';
-import { Camera, Trash } from "phosphor-react"
-import { Loading } from "../Loading";
+import { useState } from 'react'
+import html2canvas from 'html2canvas'
+import { Camera, Trash } from 'phosphor-react'
+import { Loading } from '../Loading'
 
 interface ScreenshotButtonProps {
     screenshot: string | null;
@@ -9,16 +9,17 @@ interface ScreenshotButtonProps {
 }
 
 export const ScreenshotButton = ({ screenshot, onScreenshotTook }: ScreenshotButtonProps) => {
-    const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
+    const [isTakingScreenshot, setIsTakingScreenshot] = useState(false)
 
     async function handleTakeScreenshot() {
-        setIsTakingScreenshot(true);
+        setIsTakingScreenshot(true)
 
-        const canvas = await html2canvas(document.querySelector('html')!);
-        const base64image = canvas.toDataURL('image/png');
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        const canvas = await html2canvas(document.querySelector('html')!)
+        const base64image = canvas.toDataURL('image/png')
 
-        onScreenshotTook(base64image);
-        setIsTakingScreenshot(false);
+        onScreenshotTook(base64image)
+        setIsTakingScreenshot(false)
     }
 
     if (screenshot) {
