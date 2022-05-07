@@ -10,8 +10,11 @@ import { ArrowLeft } from 'phosphor-react-native';
 
 import { theme } from '../../theme';
 import { styles } from './styles';
-import { FeedbackType } from '../Widget';
 import { feedbackTypes } from '../../utils/feedbackTypes';
+
+import { Button } from '../Button';
+import { FeedbackType } from '../Widget';
+import { ScreenshotButton } from '../ScreenshotButton';
 
 interface FormProps {
 	feedbackType: FeedbackType
@@ -45,6 +48,16 @@ export function Form({ feedbackType }: FormProps) {
 				placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
 				placeholderTextColor={theme.colors.text_secondary}
 			/>
+
+			<View style={styles.footer}>
+				<ScreenshotButton
+					onRemoveShot={() => { }}
+					onTakeShot={() => { }}
+					screenshot="https://github.com/oLemos.png"
+				/>
+
+				<Button isLoading={false} />
+			</View>
 		</View>
 	);
 }
