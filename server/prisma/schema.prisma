@@ -16,3 +16,7 @@ model Feedback {
 
     @@map("feedbacks")
 }
+
+// Para cada máquina nova:
+// - Criar um .env com variável acima com o valor: "file:./dev.db",
+// - Rodar o comando: npx prisma generate
